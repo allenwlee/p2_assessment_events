@@ -1,0 +1,36 @@
+<div class="hero-unit">
+  <p>User id: <%= @user.id%></p>
+  <h1>Your Created Events</h1>
+  <button><a href=/<%=@user.id %>/event/create>Create an event</a></button>
+  <table>
+    <tr>
+      <th>Name</th>
+      <th>Location</th>
+    </tr>
+    <% @user.created_events.each do |event| %>
+    <tr>
+      <td><%= event.name %></td>
+      <td><%= event.location %></td>
+    </tr>
+  <% end %>
+</table>  
+</div>
+
+<div class="hero-unit">
+  <h1>Your Attended Events</h1>
+  <button><a href=/<%=@user.id %>/event/attend>
+  Attend an event</a></button>
+  <table>
+    <tr>
+      <th>Name</th>
+      <th>Location</th>
+    </tr>
+    <% @user.attended_events.each do |event| %>
+    <tr>
+      <td><%= event.name %></td>
+      <td><%= event.location %></td>
+    </tr>
+  <% end %>
+</table>  
+  
+</div>

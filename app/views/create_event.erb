@@ -1,0 +1,40 @@
+<div class="hero-unit">
+<h1>Create an Event</h1>
+<div id="hidden_id"><%= @user.id %></div>
+<form method="post" action=/<%=@user.id%>/event/create class="form-horizontal">
+
+  <div class="control-group">
+    <label class="control-label" for="inputEventName">Event Name</label>
+    <div class="controls">
+      <input type="text" id="inputEventName" placeholder="Event Name" name="event_name">
+    </div>
+  </div>
+
+  <div class="control-group">
+    <label class="control-label" for="inputEventLocation">Event Location</label>
+    <div class="controls">
+      <input type="text" id="inputEventLocation" placeholder="Event Location" name="event_location">
+    </div>
+  </div>
+
+  <div class="control-group">
+    <label class="control-label" for="inputEventStart">Start</label>
+    <div class="controls">
+      <input type="date" id="EventStart" placeholder="Start" name="start">
+    </div>
+  </div>
+  
+  <div class="control-group">
+    <label class="control-label" for="inputEventEnd">End</label>
+    <div class="controls">
+      <input type="date" id="inputEventEnd" placeholder="Event End" name="end">
+    </div>
+  </div>
+  
+  <div class="control-group">
+    <div class="controls">
+      <button id="create_event" type="submit" class="btn">Create Event</button>
+    </div>
+  </div>
+</form>
+</div>

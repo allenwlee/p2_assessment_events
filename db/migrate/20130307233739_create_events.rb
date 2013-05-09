@@ -5,7 +5,7 @@ class CreateEvents < ActiveRecord::Migration
 
       t.string :name, :null => false
       t.string :location, :null => false
-
+      t.boolean :created?
       t.datetime :starts_at, :null => false
       t.datetime :ends_at, :null => false
 
